@@ -1,65 +1,66 @@
-import Image from "next/image";
+import Spotlight from "@/components/Spotlight";
+import Sidebar from "@/components/Sidebar";
+import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
+import Projects from "@/components/sections/Projects";
+import { portfolioData } from "@/data/portfolio";
 
 export default function Home() {
+  const { email, name } = portfolioData;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Spotlight />
+
+      {/* Mobile header — hanya muncul di mobile */}
+      <div className="lg:hidden px-8 pt-16 pb-8">
+        <h1 className="text-4xl font-semibold text-slate-white tracking-tight leading-tight mb-2">
+          {name}
+        </h1>
+        <p className="text-base text-slate-light mb-3">{portfolioData.title}</p>
+        <p className="text-sm text-slate leading-relaxed">{portfolioData.heroDesc}</p>
+      </div>
+
+      {/* Main wrapper */}
+      <div className="relative z-10 flex min-h-screen max-w-[1280px] mx-auto px-6 lg:px-16">
+
+        {/* Left sidebar — hanya desktop, fixed tidak ikut scroll */}
+        <div className="hidden lg:block w-[360px] shrink-0">
+          <Sidebar />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        {/* Right scrollable content */}
+<main className="flex-1 pt-8 lg:pt-24 pb-28 lg:pl-20 min-w-0">
+  <About />
+  <Experience />
+  
+  <div className="mb-20">
+    <a
+      href="/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-slate-lighter font-semibold hover:text-teal transition-colors duration-300 group"
+    >
+      View Full Résumé
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+        <path d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </a>
+  </div>
+  <Projects />
+</main>
+      </div>
+
+      {/* Fixed right email — desktop only */}
+      <div className="hidden lg:flex fixed bottom-0 right-10 flex-col items-center gap-5 z-10">
+        <a
+          href={`mailto:${email}`}
+          className="font-mono text-[0.68rem] text-slate hover:text-teal hover:-translate-y-1 transition-all duration-300 writing-vertical tracking-[0.15em]"
+        >
+          {email}
+        </a>
+        <span className="block w-px h-24 bg-slate" />
+      </div>
+    </>
   );
 }
