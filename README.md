@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Next.js + Tailwind CSS
 
 ## Struktur Project
@@ -65,3 +66,7 @@ Atau via CLI:
 ```bash
 npx vercel
 ```
+=======
+# portfolio
+A responsive and modern portfolio website built to showcase my software development skills, professional projects, and tech expertise
+>>>>>>> 0130052eda289b32971a90e2a8c94bed1dbf663e
