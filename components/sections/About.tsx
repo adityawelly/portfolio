@@ -12,7 +12,7 @@ export default function About() {
         {about.map((p, i) => (
           <p
             key={i}
-            className="text-[0.92rem] leading-relaxed text-slate"
+            className="text-[15.72px] leading-relaxed text-slate"
             dangerouslySetInnerHTML={{ __html: p }}
           />
         ))}

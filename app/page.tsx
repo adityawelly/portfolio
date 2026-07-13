@@ -3,6 +3,8 @@ import Sidebar from "@/components/Sidebar";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
+import Writing from "@/components/sections/Writing";
+import Link from "next/link";
 import { portfolioData } from "@/data/portfolio";
 
 export default function Home() {
@@ -34,7 +36,7 @@ export default function Home() {
   <About />
   <Experience />
   
-  <div className="mb-20">
+  <div className="mb-28">
     <a
       href="/resume.pdf"
       target="_blank"
@@ -48,6 +50,20 @@ export default function Home() {
     </a>
   </div>
   <Projects />
+
+  <div className="mb-28">
+    <Link
+      href="/projects"
+      className="inline-flex items-center gap-2 text-slate-lighter font-semibold hover:text-teal transition-colors duration-300 group"
+    >
+      View Full Project Archive
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+        <path d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </Link>
+  </div>
+
+  <Writing />
 </main>
       </div>
 

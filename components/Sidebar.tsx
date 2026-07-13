@@ -29,7 +29,7 @@ export default function Sidebar() {
         <p className="text-lg text-slate-light mb-4">{title}</p>
         <p className="text-sm text-slate leading-relaxed max-w-[280px]">{heroDesc}</p>
 
-        <ul className="mt-12 flex flex-col gap-1 list-none">
+        <ul className="mt-12 mb-12 flex flex-col gap-1 list-none">
           {sections.map(s => {
             const isActive = active === s.key;
             return (
@@ -53,7 +53,7 @@ export default function Sidebar() {
         </ul>
       </div>
 
-      <div className="flex gap-5">
+      <div className="flex gap-4">
         {socials.map(s => (
           <a
             key={s.name}

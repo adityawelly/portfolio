@@ -10,6 +10,7 @@ export const portfolioData = {
     { key: "about",      label: "About" },
     { key: "experience", label: "Experience" },
     { key: "projects",   label: "Project" },
+    { key: "writing",    label: "Writing" },
   ],
 
   // ── Social links ─────────────────────────────────────────────
@@ -33,7 +34,7 @@ about: [
     company: "PT Mulia Industrindo Tbk",
     role: "SAP ABAP Developer",
     period: "Feb 2024 — Present",
-    url: "",
+    url: "https://www.muliaindustrindo.com",
     subRoles: [
       { title: "Web Developer", period: "Mar 2024 — Feb 2026" },
     ],
@@ -44,7 +45,7 @@ about: [
     company: "PT Niramas Utama Tbk",
     role: "HR Analytics",
     period: "Jun 2022 — Mar 2024",
-    url: "",
+    url: "https://www.inacofood.com",
     subRoles: [],
     desc: "Developed and maintained web applications to streamline HR processes. Built interactive dashboards and reports using Excel, Power BI, and other BI tools to track HR metrics such as attrition, recruitment, and performance. Automated HR reporting processes, reducing manual work and improving accuracy.",
     tech: ["PHP", "Laravel", "Power BI", "Excel", "MySQL"],
@@ -53,7 +54,7 @@ about: [
     company: "Magna Solusi Indonesia",
     role: "Full Stack Developer",
     period: "Nov 2020 — Jun 2022",
-    url: "",
+    url: "https://www.magnasolusi.com",
     subRoles: [
       { title: "Junior Full Stack Developer", period: "Nov 2020 — Nov 2021" },
     ],
@@ -64,7 +65,7 @@ about: [
     company: "PT Dirgantara Indonesia",
     role: "Software Engineer Intern",
     period: "Jun 2019 — Aug 2019",
-    url: "",
+    url: "https://www.indonesian-aerospace.com",
     subRoles: [],
     desc: "Developed 3D flight animation simulations for the KAI KF-21 Boramae aircraft using FlightGear. Collaborated with engineers and designers to ensure animations accurately represented aircraft mechanics and flight dynamics. Assisted in coding scripts and algorithms to simulate realistic aircraft movement.",
     tech: ["C++", "Systems Engineering", "FlightGear"],
@@ -98,4 +99,32 @@ about: [
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
 ],
+
+  // ── Project Archive ──────────────────────────────────────────
+  projectArchive: [
+    {
+      year: "2026",
+      title: "Portfolio Website",
+      url: "https://adityawelly.com",
+      desc: "Personal portfolio website built with Next.js and Tailwind CSS, inspired by Brittany Chiang.",
+      tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+      stars: "",
+    },
+    {
+      year: "2024",
+      title: "Contoh Project Lain",
+      url: "",
+      desc: "Ganti dengan deskripsi project archive kamu di sini.",
+      tech: ["PHP", "Laravel"],
+      stars: "",
+    },
+    {
+      year: "2022",
+      title: "Contoh Project Lain",
+      url: "",
+      desc: "Ganti dengan deskripsi project archive kamu di sini.",
+      tech: ["JavaScript", "MySQL"],
+      stars: "",
+    },
+  ],
 };
