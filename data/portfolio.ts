@@ -10,7 +10,7 @@ export const portfolioData = {
     { key: "about",      label: "About" },
     { key: "experience", label: "Experience" },
     { key: "projects",   label: "Project" },
-    { key: "writing",    label: "Writing" },
+    { key: "article",    label: "Article" },
   ],
 
   // ── Social links ─────────────────────────────────────────────
@@ -83,12 +83,12 @@ about: [
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
   {
-    name: "HR Analytics Dashboard",
-    url: "",
-    image: "/projects/hr-analytics.png",
-    desc: "Interactive dashboard for tracking HR metrics such as attrition, recruitment, and performance, automating reports that used to be built manually.",
+    name: "YaloSpark Company Profile",
+    url: "https://yalospark.vercel.app",
+    image: "/projects/yalospark.png",
+    desc: "Company profile website for YaloSpark, built to showcase the company's services and information.",
     stats: "",
-    tech: ["Power BI", "Laravel", "MySQL"],
+    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
   {
     name: "ABAP Report Automation",

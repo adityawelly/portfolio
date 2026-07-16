@@ -2,9 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const WRITING_DIR = path.join(process.cwd(), "content/writing");
+const ARTICLE_DIR = path.join(process.cwd(), "content/article");
 
-export type WritingMeta = {
+export type ArticleMeta = {
   slug: string;
   title: string;
   year: string;
@@ -12,15 +12,15 @@ export type WritingMeta = {
   desc: string;
 };
 
-export type Writing = WritingMeta & { content: string };
+export type Article = ArticleMeta & { content: string };
 
-export function getAllWritings(): WritingMeta[] {
-  const files = fs.readdirSync(WRITING_DIR).filter(f => f.endsWith(".md"));
+export function getAllArticles(): ArticleMeta[] {
+  const files = fs.readdirSync(ARTICLE_DIR).filter(f => f.endsWith(".md"));
 
   return files
     .map(filename => {
       const slug = filename.replace(/\.md$/, "");
-      const raw = fs.readFileSync(path.join(WRITING_DIR, filename), "utf8");
+      const raw = fs.readFileSync(path.join(ARTICLE_DIR, filename), "utf8");
       const { data } = matter(raw);
       return {
         slug,
@@ -33,8 +33,8 @@ export function getAllWritings(): WritingMeta[] {
     .sort((a, b) => Number(b.year) - Number(a.year));
 }
 
-export function getWritingBySlug(slug: string): Writing | null {
-  const filePath = path.join(WRITING_DIR, `${slug}.md`);
+export function getArticleBySlug(slug: string): Article | null {
+  const filePath = path.join(ARTICLE_DIR, `${slug}.md`);
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, "utf8");

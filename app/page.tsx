@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
-import Writing from "@/components/sections/Writing";
+import Article from "@/components/sections/Article";
 import Link from "next/link";
 import { portfolioData } from "@/data/portfolio";
 
@@ -63,7 +63,7 @@ export default function Home() {
     </Link>
   </div>
 
-  <Writing />
+  <Article />
 </main>
       </div>
 

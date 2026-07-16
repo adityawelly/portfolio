@@ -2,20 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { notFound } from "next/navigation";
-import { getAllWritings, getWritingBySlug } from "@/lib/writings";
+import { getAllArticles, getArticleBySlug } from "@/lib/articles";
 
 export function generateStaticParams() {
-  return getAllWritings().map(w => ({ slug: w.slug }));
+  return getAllArticles().map(a => ({ slug: a.slug }));
 }
 
-export default function WritingPage({ params }: { params: { slug: string } }) {
-  const writing = getWritingBySlug(params.slug);
-  if (!writing) notFound();
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const article = getArticleBySlug(params.slug);
+  if (!article) notFound();
 
   return (
     <div className="relative z-10 max-w-[720px] mx-auto px-6 py-16 lg:py-24">
       <Link
-        href="/#writing"
+        href="/#article"
         className="inline-flex items-center gap-2 text-sm text-slate hover:text-teal transition-colors duration-300 mb-10 no-underline"
       >
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -25,24 +25,24 @@ export default function WritingPage({ params }: { params: { slug: string } }) {
       </Link>
 
       <div className="font-mono text-[0.72rem] text-slate tracking-[0.15em] uppercase mb-4">
-        {writing.year}
+        {article.year}
       </div>
       <h1 className="text-3xl sm:text-4xl font-semibold text-slate-white tracking-tight leading-tight mb-8">
-        {writing.title}
+        {article.title}
       </h1>
 
       <div className="w-full aspect-video rounded-lg border border-slate/20 overflow-hidden mb-10">
         <Image
-          src={writing.image}
-          alt={writing.title}
+          src={article.image}
+          alt={article.title}
           width={720}
           height={405}
           className="object-cover w-full h-full"
         />
       </div>
 
-      <div className="prose-writing">
-        <ReactMarkdown>{writing.content}</ReactMarkdown>
+      <div className="prose-article">
+        <ReactMarkdown>{article.content}</ReactMarkdown>
       </div>
     </div>
   );
