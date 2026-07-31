@@ -39,7 +39,7 @@ about: [
       { title: "Web Developer", period: "Mar 2024 — Feb 2026" },
     ],
     desc: "Responsible for developing, enhancing, and supporting SAP applications using ABAP to align with business requirements. Develop custom reports, forms, and enhancements (User Exit / BADI), perform debugging and issue analysis, support functional teams in SD/MM/FI modules, and optimize existing programs for performance and stability.",
-    tech: ["ABAP", "SAP S/4HANA", "SD/MM/FI", "PHP", "Software Development"],
+    tech: ["ABAP", "SAP S/4HANA", "PHP", "JavaScript", "Software Development", "MySQL", "Code Igniter", "Fiori", "Project Management", "Tableau"],
   },
   {
     company: "PT Niramas Utama Tbk",
@@ -48,7 +48,7 @@ about: [
     url: "https://www.inacofood.com",
     subRoles: [],
     desc: "Developed and maintained web applications to streamline HR processes. Built interactive dashboards and reports using Excel, Power BI, and other BI tools to track HR metrics such as attrition, recruitment, and performance. Automated HR reporting processes, reducing manual work and improving accuracy.",
-    tech: ["PHP", "Laravel", "Power BI", "Excel", "MySQL"],
+    tech: ["PHP", "JavaScript", "Laravel", "Power BI", "Excel", "MySQL"],
   },
   {
     company: "Magna Solusi Indonesia",
