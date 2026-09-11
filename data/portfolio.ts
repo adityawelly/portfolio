@@ -51,7 +51,7 @@ about: [
     tech: ["PHP", "JavaScript", "Laravel", "Power BI", "Excel", "MySQL"],
   },
   {
-    company: "Magna Solusi Indonesia",
+    company: "PT Magna Solusi Indonesia",
     role: "Full Stack Developer",
     period: "Nov 2020 — Jun 2022",
     url: "https://www.magnasolusi.com",
@@ -62,7 +62,7 @@ about: [
     tech: ["PHP", "JavaScript", "MySQL", "Microsoft SQL Server"],
   },
   {
-    company: "PT Dirgantara Indonesia",
+    company: "PT Dirgantara Indonesia (Persero)",
     role: "Software Engineer Intern",
     period: "Jun 2019 — Aug 2019",
     url: "https://www.indonesian-aerospace.com",
