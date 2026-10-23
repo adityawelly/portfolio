@@ -33,7 +33,7 @@ about: [
   {
     company: "PT Mulia Industrindo Tbk",
     role: "SAP ABAP Developer",
-    period: "Feb 2024 — Present",
+    period: "Mar 2024 — Present",
     url: "https://www.muliaindustrindo.com",
     subRoles: [
       { title: "Web Developer", period: "Mar 2024 — Feb 2026" },
